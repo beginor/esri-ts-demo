@@ -1,4 +1,5 @@
 import { loadScript, loadModules } from 'esri-loader';
+
 export class MapApp {
 
     private mapView: __esri.MapView;
