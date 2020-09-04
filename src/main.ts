@@ -1,8 +1,9 @@
-import { MapApp } from './app/app'
+import { MapApp } from './app/map-app'
 
 import './main.css';
 
 const pathBase = `${location.protocol}//${location.host}`;
+
 window['dojoConfig'] = {
   async: true,
   packages: [
