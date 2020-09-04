@@ -11,11 +11,14 @@ window['dojoConfig'] = {
 };
 window['esriConfig'] = { locale: 'zh-cn' };
 
-async function initMap() {
+async function initMap(): Promise<void> {
   const app = new MapApp();
   await app.loadScript();
   await app.initMap('viewDiv');
   await app.addFeatureLayer();
 }
 
-initMap();
+initMap().catch(ex => {
+    alert('Map init error!');
+    console.error(ex);
+});
